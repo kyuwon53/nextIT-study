@@ -3,7 +3,7 @@ from selenium import webdriver
 import time
 import cx_Oracle
 from selenium.webdriver.common.keys import Keys
-conn = cx_Oracle.connect('PROJ','oracle','192.168.1.49:1521/XE')
+conn = cx_Oracle.connect('{접속명}','{비번}','{접속호스트:포트/SID}')
 cur = conn.cursor()
 index =1;
 driver = webdriver.Chrome('./chromedriver')
