@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/bootstrap-3.3.2/css/bootstrap.css" rel="stylesheet">
+<link href="/css/study.css" rel="stylesheet">
+<script src="/js/jquery1.11.2.js"></script>
+<script src="/bootstrap-3.3.2/js/bootstrap.js"></script>
+<title>Insert title here</title>
+</head>
+<body>
+<!-- 값 출력 ${prod.prodId}, th:object="${prod}" 값출력 "*{prodId}" -->
+<div class="container">
+<h3>상품 상세보기</h3>
+<table class="prod-list" th:object="${prod}">
+	<caption>상품 상세보기</caption>
+	<colgroup>
+		<col style="width: 25%;">
+		<col />
+	</colgroup>
+	<tbody class="prod-detail">
+		<tr>
+			<td>제품명</td>			
+			<td th:text="*{prodName}">제품명</td>
+		</tr>	
+		<tr>
+			<td>이미지</td>			
+			<td><img alt="" th:src="*{prodImg}"></td>
+		</tr>	
+		<tr>
+			<td>가격</td>			
+			<td th:text="*{prodPrice}+'원'"></td>
+		</tr>
+		<tr>
+			<td>등록일</td>			
+			<td th:text="*{prodRegDate}"></td>
+		</tr>
+		<tr>
+			<td>상세설명</td>			
+			<td th:text="*{prodDetail}"></td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="btn-basic-area" >
+	<span><a href="/index.html" >Home</a> </span>
+	<span><a href="list" >상품목록</a> </span>
+</div>
+
+</div><!-- container -->
+</body>
+</html>

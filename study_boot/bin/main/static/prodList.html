@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/bootstrap-3.3.2/css/bootstrap.css" rel="stylesheet">
+<link href="/css/study.css" rel="stylesheet">
+<script src="/js/jquery1.11.2.js"></script>
+<script src="/bootstrap-3.3.2/js/bootstrap.js"></script>
+<title>제품 목록</title>
+</head>
+<body>
+<div class="container">
+<h3>제품 목록</h3>
+<table class="prod-list">
+	<caption class="hidden"><em>컴퓨터 제품 목록</em></caption>
+	<colgroup>
+		<col style="width: 33%;">
+		<col style="width: 33%;">
+		<col />
+	</colgroup>
+	<tbody>
+		<tr>
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=CPU001"><img alt="" src="/images/prod/CPU001.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=CPU001">AMD 라이젠 5 3500 (마티스)</a>
+					<li class="prod-price">140,200원
+					<li class="prod-reg-date">등록월 2019.11
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=CPU002"><img alt="" src="/images/prod/CPU002.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=CPU002">인텔 코어i7-9세대 9700K</a>
+					<li class="prod-price">420,000원
+					<li class="prod-reg-date">등록월 2018.10
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=CPU003"><img alt="" src="/images/prod/CPU003.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=CPU003">인텔 코어i5-9세대 9600KF </a>
+					<li class="prod-price">203,000원
+					<li class="prod-reg-date">등록월 2019.03
+				</ul>
+			</td>
+		</tr>	
+		<tr>			
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=CPU004"><img alt="" src="/images/prod/CPU004.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=CPU004">AMD 라이젠5-3세대 3600XT (마티스)</a>
+					<li class="prod-price">318,290원
+					<li class="prod-reg-date">등록월 2020.07
+				</ul>
+			</td>			
+		
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=MEM001"><img alt="" src="<%=request.getContextPath()%>/images/prod/MEM001.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=MEM001">삼성전자 DDR4 8G PC4-21300</a>
+					<li class="prod-price">40,000원
+					<li class="prod-reg-date">등록월 2018.03
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=MEM002"><img alt="" src="/images/prod/MEM002.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=MEM002">GeIL DDR4 8G PC4-21300 CL19 PRISTINE</a>
+					<li class="prod-price">34,500원
+					<li class="prod-reg-date">등록월 2018.05
+				</ul>
+			</td>
+		</tr>	
+		<tr>					
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=MEM003"><img alt="" src="/images/prod/MEM003.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=MEM003">ESSENCORE KLEVV DDR4 8G PC4-21300 CL19</a>
+					<li class="prod-price">35,000원
+					<li class="prod-reg-date">등록월 2019.08
+				</ul>
+			</td>
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=MEM004"><img alt="" src="/images/prod/MEM004.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=MEM004">마이크론 Crucial DDR4 8G PC4-25600 CL22</a>
+					<li class="prod-price">34,000원
+					<li class="prod-reg-date">등록월 2020.01
+				</ul>
+			</td>			
+			<td>
+				<ul>
+					<li class="prod-image"><a href="prodView.html?prodId=HDD001"><img alt="" src="/images/prod/HDD001.jpg"></a>
+					<li class="prod-title"><a href="prodView.html?prodId=HDD001">WD BLUE 7200/64M (WD10EZEX, 1TB)</a>
+					<li class="prod-price">55,500원
+					<li class="prod-reg-date">등록월 2012.06
+				</ul>
+			</td>					
+		</tr>		
+	</tbody>
+
+</table>
+</div>
+</body>
+</html>
