@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+	<th:block th:insert="/fragments/header.html :: main" ></th:block>
+<title>제품 목록</title>
+</head>
+<body th:align="center" >
+<div class="container">
+<h3 th:text="${message} ">제품 목록</h3>
+<script th:inline="javascript">
+	var arr = [[${prods}]];
+</script>
+<table class="prod-list">
+	<caption class="hidden"><em>컴퓨터 제품 목록</em></caption>
+	<colgroup>
+		<col style="width: 33%;">
+		<col style="width: 33%;">
+		<col />
+	</colgroup>
+	<!-- 상세보기 url 
+		일반적인 : 		"@{/view(prodId=${vo.prodId})}"
+		문자열 더하기 :	"@{'/view/'+${vo.prodId})}" 
+		변수사용:			"@{'/view/{id}(id=${vo.prodId})}"
+		-->
+	<tbody >
+	<th:block th:each="vo,num :${prods}"> <!--/* 상태변수(미 입력시)는 객체명+Stat :voStat */-->
+		<th:block th:if="${num.count % 3 eq 1}">
+		<tr th:if="${(num.count-1 )% 3 eq 0}">
+		</th:block>
+			<td >
+				<ul>
+					<li class="prod-image"><a th:href="@{/prod/view(prodId=${vo.prodId})}"><img alt="" th:src="${vo.prodImg}"></a>
+					<li class="prod-title"><a th:href="@{/prod/view/{id}(id=${vo.prodId})}" th:text="${vo.prodName}">상품명</a>
+					<li class="prod-price" th:text="${vo.prodPrice}+'원'">상품가격
+					<li class="prod-reg-date" th:text="${vo.prodRegDate}">등록일
+				</ul>
+			</td>
+		<th:block th:if="${num.count % 3 eq 0}">
+		</tr>		
+		</th:block>
+	</th:block>
+	</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+.prod-list tbody td {border: 1px dashed;}
+.prod-list tbody ul {padding-left: 20px;}
+.prod-list tbody ul li {list-style: none; line-height: 1.4em;}
+
+.prod-title a ,
+.prod-title a:active,
+.prod-title a:focus   {text-overflow:ellipsis; text-decoration: none; }
+
+.prod-image {text-align: center;}
+.prod-image img {
+	 height: 150px; 
+}
+
+.btn-basic-area { padding-top: 10px; border-top: 1px dashed;  text-align: center; }
+.btn-basic-area span {padding: 10px 30px 10px; min-width: 100px;}

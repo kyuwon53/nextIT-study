@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.study.prod.dao.IProdDao">
+ <select id="getProdList" resultType="com.study.prod.vo.ProdVO" >
+ 	SELECT prod_id
+	       , prod_name
+	       , prod_lgu
+	       , prod_price
+	       , prod_img
+	       , prod_reg_date
+	FROM tb_prod
+ </select>
+ 
+ <select id="getProd" resultType="com.study.prod.vo.ProdVO" parameterType="String">
+ 	SELECT prod_id
+	       , prod_name
+	       , prod_lgu
+	       , prod_price
+	       , prod_img
+	       , prod_reg_date
+	FROM tb_prod
+	WHERE prod_id = #{prodId} 
+ </select>
+</mapper>
